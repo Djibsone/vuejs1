@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!--1e partie-->
+        <!-- <h1>Salut, {{ auther }} <span v-if="showText">{{ icon }}</span></h1>
+        <div>
+            <p>{{ age }}</p>
+            <p v-show="bioShow">{{ bio }}</p>
+        </div>
+        <div>
+            <button>
+                <span v-on:click="connect" v-if="!isConnect">Connect</span>
+                <span v-on:click="disconnect" v-else="isConnect">Disconnect</span>
+            </button>
+            <button v-on:click="add_old">Add</button>
+            <button v-on:click="minus_old">Minus</button>
+        </div> -->
+        <!-- <h1>Les Evènements</h1>
+        <div class="box" v-on:mouseover="handMouse">Mouse Over (entree)</div>
+        <div class="box" @mouseleave="handMouse">Mouse Leave (sortie)</div>
+        <div class="box" @dblclick="handMouse">Mouse Double Click</div>
+        <div class="box" @mousemove="moved">Position X:{{ x }} et Y:{{ y }}</div> -->
+        <!--2e partie-->
+        <h1>{{ titre }}</h1>
+        <hr>
+        <div v-for="user in users" class="card" :class="{ best: user.isBest }" @click="toggleBest(user)"> 
+            <img :src="user.image" alt="MyImage">
+            <div>
+                <h3>{{ user.auther }} {{ user.age }} ans</h3>
+                <p>{{ user.bio }}</p>
+                <!-- Cliquez-ici <a v-bind:href="user.url">Site Web</a> pour accéder au site -->
+                Cliquez-ici <a :href="user.url">Site Web</a> pour accéder au site
+            </div>
+        </div>
+        <!--3e partie-->
+        <input type="text" ref="name">
+        <button @click="handClick">Cliquez-moi</button>
+    </div>
+     
+    <script src="https://unpkg.com/vue@3.2.28"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

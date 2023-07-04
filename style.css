@@ -1,0 +1,23 @@
+.box {
+    padding: 100px 0;
+    width: 400px;
+    background-color: #ddd;
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+}
+img {
+    width: 80px;
+    cursor: pointer;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ddd;
+    margin: 10px;
+}
+.best {
+    background-color: rgb(24, 23, 23);
+    color: #fff;
+}
